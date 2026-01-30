@@ -262,13 +262,18 @@
       </section>
     </main>
 
-    <aside class="chat-widget" aria-label="Chat preview">
+    <aside class="chat-widget chat-widget--collapsed" aria-label="Chat preview">
       <div class="chat-widget__header">
         <div>
           <p class="chat-widget__title">Cosmos Chat</p>
           <span class="chat-widget__status">Coming soon</span>
         </div>
-        <span class="chat-widget__dot" aria-hidden="true"></span>
+        <div class="chat-widget__actions">
+          <span class="chat-widget__dot" aria-hidden="true"></span>
+          <button class="chat-widget__toggle" type="button" aria-expanded="false">
+            Open
+          </button>
+        </div>
       </div>
       <div class="chat-widget__body">
         <p class="chat-bubble chat-bubble--bot">
@@ -291,5 +296,17 @@
       <p>Cosmos Kombucha — handcrafted, live, and lively.</p>
       <p>Contact: deshasuperfood@gmail.com | +91 70100 22735</p>
     </footer>
+    <script>
+      const chatWidget = document.querySelector(".chat-widget");
+      const chatToggle = document.querySelector(".chat-widget__toggle");
+
+      chatToggle.addEventListener("click", () => {
+        const isCollapsed = chatWidget.classList.toggle(
+          "chat-widget--collapsed"
+        );
+        chatToggle.setAttribute("aria-expanded", String(!isCollapsed));
+        chatToggle.textContent = isCollapsed ? "Open" : "Close";
+      });
+    </script>
   </body>
 </html>
