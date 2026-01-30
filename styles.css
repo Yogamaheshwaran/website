@@ -323,6 +323,7 @@ main {
   border: 1px solid rgba(15, 59, 47, 0.08);
   overflow: hidden;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  z-index: 50;
 }
 
 .chat-widget__header {
