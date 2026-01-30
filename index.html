@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="styles.css?v=20260130" />
   </head>
   <body>
-    <header class="hero">
+    <nav class="site-nav">
+      <div class="site-nav__logo">Cosmos Kombucha</div>
+      <div class="site-nav__links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#how-made">How It’s Made</a>
+        <a href="#roadmap">Coming Soon</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn--primary site-nav__cta" href="#roadmap">Preorder waitlist</a>
+    </nav>
+
+    <header class="hero" id="home">
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <p class="hero__eyebrow">Cosmos Kombucha</p>
@@ -31,6 +44,49 @@
     </header>
 
     <main>
+      <section class="section section--products" id="products">
+        <div class="section__header">
+          <p class="section__eyebrow">Products</p>
+          <h2>Signature bottles, brewed for balance.</h2>
+          <p>Explore the lineup while we prepare online ordering.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img
+              src="Images/IMG_20250628_142620.jpg"
+              alt="Assorted Cosmos kombucha bottles"
+            />
+            <div class="product-card__body">
+              <h3>Flavor Flight</h3>
+              <p>Mix-and-match a rainbow of refreshing brews.</p>
+              <span class="tag">Coming soon</span>
+            </div>
+          </article>
+          <article class="product-card">
+            <img
+              src="Images/IMG_20250628_123951.jpg"
+              alt="Cosmos kombucha bottle with tasting card"
+            />
+            <div class="product-card__body">
+              <h3>Classic Brew</h3>
+              <p>Our original kombucha for everyday gut support.</p>
+              <span class="tag">Coming soon</span>
+            </div>
+          </article>
+          <article class="product-card">
+            <img
+              src="Images/IMG_20250414_132545.jpg"
+              alt="Cosmos kombucha bottles with brand story card"
+            />
+            <div class="product-card__body">
+              <h3>Wellness Duo</h3>
+              <p>Two-bottle bundle, perfect for sharing.</p>
+              <span class="tag">Coming soon</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section section--featured" id="flavors">
         <div class="two-column">
           <div class="section__header">
@@ -231,8 +287,9 @@
       </div>
     </aside>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <p>Cosmos Kombucha — handcrafted, live, and lively.</p>
+      <p>Contact: deshasuperfood@gmail.com | +91 70100 22735</p>
     </footer>
   </body>
 </html>
